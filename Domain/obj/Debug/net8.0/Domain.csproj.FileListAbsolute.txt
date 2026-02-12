@@ -1,0 +1,13 @@
+F:\Pharmacy-Locator1\Pharmacy-Locator\Domain\bin\Debug\net8.0\Domain.deps.json
+F:\Pharmacy-Locator1\Pharmacy-Locator\Domain\bin\Debug\net8.0\Domain.dll
+F:\Pharmacy-Locator1\Pharmacy-Locator\Domain\bin\Debug\net8.0\Domain.pdb
+F:\Pharmacy-Locator1\Pharmacy-Locator\Domain\obj\Debug\net8.0\Domain.csproj.AssemblyReference.cache
+F:\Pharmacy-Locator1\Pharmacy-Locator\Domain\obj\Debug\net8.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+F:\Pharmacy-Locator1\Pharmacy-Locator\Domain\obj\Debug\net8.0\Domain.AssemblyInfoInputs.cache
+F:\Pharmacy-Locator1\Pharmacy-Locator\Domain\obj\Debug\net8.0\Domain.AssemblyInfo.cs
+F:\Pharmacy-Locator1\Pharmacy-Locator\Domain\obj\Debug\net8.0\Domain.csproj.CoreCompileInputs.cache
+F:\Pharmacy-Locator1\Pharmacy-Locator\Domain\obj\Debug\net8.0\Domain.sourcelink.json
+F:\Pharmacy-Locator1\Pharmacy-Locator\Domain\obj\Debug\net8.0\Domain.dll
+F:\Pharmacy-Locator1\Pharmacy-Locator\Domain\obj\Debug\net8.0\refint\Domain.dll
+F:\Pharmacy-Locator1\Pharmacy-Locator\Domain\obj\Debug\net8.0\Domain.pdb
+F:\Pharmacy-Locator1\Pharmacy-Locator\Domain\obj\Debug\net8.0\ref\Domain.dll

@@ -1,11 +1,44 @@
 {
   "version": 3,
   "targets": {
-    "net8.0": {}
+    "net8.0": {
+      "NetTopologySuite/2.6.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.1/NetTopologySuite.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.1/NetTopologySuite.dll": {
+            "related": ".xml"
+          }
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "NetTopologySuite/2.6.0": {
+      "sha512": "1B1OTacTd4QtFyBeuIOcThwSSLUdRZU3bSFIwM8vk36XiZlBMi3K36u74e4OqwwHRHUuJC1PhbDx4hyI266X1Q==",
+      "type": "package",
+      "path": "nettopologysuite/2.6.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lib/netstandard2.0/NetTopologySuite.dll",
+        "lib/netstandard2.0/NetTopologySuite.xml",
+        "lib/netstandard2.1/NetTopologySuite.dll",
+        "lib/netstandard2.1/NetTopologySuite.xml",
+        "nettopologysuite.2.6.0.nupkg.sha512",
+        "nettopologysuite.nuspec"
+      ]
+    }
+  },
   "projectFileDependencyGroups": {
-    "net8.0": []
+    "net8.0": [
+      "NetTopologySuite >= 2.6.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\ALI\\.nuget\\packages\\": {},
@@ -14,11 +47,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ALI\\source\\repos\\Pharmacy Locator\\Domain\\Domain.csproj",
+      "projectUniqueName": "F:\\Pharmacy-Locator1\\Pharmacy-Locator\\Domain\\Domain.csproj",
       "projectName": "Domain",
-      "projectPath": "C:\\Users\\ALI\\source\\repos\\Pharmacy Locator\\Domain\\Domain.csproj",
+      "projectPath": "F:\\Pharmacy-Locator1\\Pharmacy-Locator\\Domain\\Domain.csproj",
       "packagesPath": "C:\\Users\\ALI\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ALI\\source\\repos\\Pharmacy Locator\\Domain\\obj\\",
+      "outputPath": "F:\\Pharmacy-Locator1\\Pharmacy-Locator\\Domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -56,6 +89,12 @@
     "frameworks": {
       "net8.0": {
         "targetAlias": "net8.0",
+        "dependencies": {
+          "NetTopologySuite": {
+            "target": "Package",
+            "version": "[2.6.0, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",

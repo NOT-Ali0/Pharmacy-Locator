@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ALI\\source\\repos\\Pharmacy Locator\\Pharmacy Locator\\Pharmacy Locator.csproj": {}
+    "F:\\Pharmacy-Locator1\\Pharmacy-Locator\\Pharmacy Locator\\Pharmacy Locator.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ALI\\source\\repos\\Pharmacy Locator\\Application\\Application.csproj": {
+    "F:\\Pharmacy-Locator1\\Pharmacy-Locator\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ALI\\source\\repos\\Pharmacy Locator\\Application\\Application.csproj",
+        "projectUniqueName": "F:\\Pharmacy-Locator1\\Pharmacy-Locator\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "C:\\Users\\ALI\\source\\repos\\Pharmacy Locator\\Application\\Application.csproj",
+        "projectPath": "F:\\Pharmacy-Locator1\\Pharmacy-Locator\\Application\\Application.csproj",
         "packagesPath": "C:\\Users\\ALI\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ALI\\source\\repos\\Pharmacy Locator\\Application\\obj\\",
+        "outputPath": "F:\\Pharmacy-Locator1\\Pharmacy-Locator\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -32,8 +32,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\ALI\\source\\repos\\Pharmacy Locator\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\ALI\\source\\repos\\Pharmacy Locator\\Domain\\Domain.csproj"
+              "F:\\Pharmacy-Locator1\\Pharmacy-Locator\\Domain\\Domain.csproj": {
+                "projectPath": "F:\\Pharmacy-Locator1\\Pharmacy-Locator\\Domain\\Domain.csproj"
               }
             }
           }
@@ -53,6 +53,28 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
+            "BCrypt.Net-Next": {
+              "target": "Package",
+              "version": "[4.0.3, )"
+            },
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[12.1.1, )"
+            },
+            "FluentValidation.DependencyInjectionExtensions": {
+              "target": "Package",
+              "version": "[12.1.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -73,14 +95,14 @@
         }
       }
     },
-    "C:\\Users\\ALI\\source\\repos\\Pharmacy Locator\\Domain\\Domain.csproj": {
+    "F:\\Pharmacy-Locator1\\Pharmacy-Locator\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ALI\\source\\repos\\Pharmacy Locator\\Domain\\Domain.csproj",
+        "projectUniqueName": "F:\\Pharmacy-Locator1\\Pharmacy-Locator\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\ALI\\source\\repos\\Pharmacy Locator\\Domain\\Domain.csproj",
+        "projectPath": "F:\\Pharmacy-Locator1\\Pharmacy-Locator\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\ALI\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ALI\\source\\repos\\Pharmacy Locator\\Domain\\obj\\",
+        "outputPath": "F:\\Pharmacy-Locator1\\Pharmacy-Locator\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -118,6 +140,12 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "NetTopologySuite": {
+              "target": "Package",
+              "version": "[2.6.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -138,14 +166,14 @@
         }
       }
     },
-    "C:\\Users\\ALI\\source\\repos\\Pharmacy Locator\\Infrastructure\\Infrastructure.csproj": {
+    "F:\\Pharmacy-Locator1\\Pharmacy-Locator\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ALI\\source\\repos\\Pharmacy Locator\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "F:\\Pharmacy-Locator1\\Pharmacy-Locator\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "C:\\Users\\ALI\\source\\repos\\Pharmacy Locator\\Infrastructure\\Infrastructure.csproj",
+        "projectPath": "F:\\Pharmacy-Locator1\\Pharmacy-Locator\\Infrastructure\\Infrastructure.csproj",
         "packagesPath": "C:\\Users\\ALI\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ALI\\source\\repos\\Pharmacy Locator\\Infrastructure\\obj\\",
+        "outputPath": "F:\\Pharmacy-Locator1\\Pharmacy-Locator\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -166,80 +194,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\ALI\\source\\repos\\Pharmacy Locator\\Application\\Application.csproj": {
-                "projectPath": "C:\\Users\\ALI\\source\\repos\\Pharmacy Locator\\Application\\Application.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.300"
-      },
-      "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48",
-            "net481"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "C:\\Users\\ALI\\source\\repos\\Pharmacy Locator\\Pharmacy Locator\\Pharmacy Locator.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\ALI\\source\\repos\\Pharmacy Locator\\Pharmacy Locator\\Pharmacy Locator.csproj",
-        "projectName": "Pharmacy Locator",
-        "projectPath": "C:\\Users\\ALI\\source\\repos\\Pharmacy Locator\\Pharmacy Locator\\Pharmacy Locator.csproj",
-        "packagesPath": "C:\\Users\\ALI\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ALI\\source\\repos\\Pharmacy Locator\\Pharmacy Locator\\obj\\",
-        "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
-        "configFilePaths": [
-          "C:\\Users\\ALI\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net8.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
-            "projectReferences": {
-              "C:\\Users\\ALI\\source\\repos\\Pharmacy Locator\\Application\\Application.csproj": {
-                "projectPath": "C:\\Users\\ALI\\source\\repos\\Pharmacy Locator\\Application\\Application.csproj"
-              },
-              "C:\\Users\\ALI\\source\\repos\\Pharmacy Locator\\Infrastructure\\Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\ALI\\source\\repos\\Pharmacy Locator\\Infrastructure\\Infrastructure.csproj"
+              "F:\\Pharmacy-Locator1\\Pharmacy-Locator\\Application\\Application.csproj": {
+                "projectPath": "F:\\Pharmacy-Locator1\\Pharmacy-Locator\\Application\\Application.csproj"
               }
             }
           }
@@ -260,6 +216,120 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "BCrypt.Net-Next": {
+              "target": "Package",
+              "version": "[4.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.Options.ConfigurationExtensions": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL.NetTopologySuite": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[8.15.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "F:\\Pharmacy-Locator1\\Pharmacy-Locator\\Pharmacy Locator\\Pharmacy Locator.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\Pharmacy-Locator1\\Pharmacy-Locator\\Pharmacy Locator\\Pharmacy Locator.csproj",
+        "projectName": "Pharmacy Locator",
+        "projectPath": "F:\\Pharmacy-Locator1\\Pharmacy-Locator\\Pharmacy Locator\\Pharmacy Locator.csproj",
+        "packagesPath": "C:\\Users\\ALI\\.nuget\\packages\\",
+        "outputPath": "F:\\Pharmacy-Locator1\\Pharmacy-Locator\\Pharmacy Locator\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\ALI\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "F:\\Pharmacy-Locator1\\Pharmacy-Locator\\Application\\Application.csproj": {
+                "projectPath": "F:\\Pharmacy-Locator1\\Pharmacy-Locator\\Application\\Application.csproj"
+              },
+              "F:\\Pharmacy-Locator1\\Pharmacy-Locator\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "F:\\Pharmacy-Locator1\\Pharmacy-Locator\\Infrastructure\\Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.6.2, )"

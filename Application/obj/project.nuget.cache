@@ -1,8 +1,20 @@
 {
   "version": 2,
-  "dgSpecHash": "cNMbhsq2qH0=",
+  "dgSpecHash": "4V1m3oCqZw8=",
   "success": true,
-  "projectFilePath": "C:\\Users\\ALI\\source\\repos\\Pharmacy Locator\\Application\\Application.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "F:\\Pharmacy-Locator1\\Pharmacy-Locator\\Application\\Application.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ALI\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\ALI\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
+    "C:\\Users\\ALI\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
+    "C:\\Users\\ALI\\.nuget\\packages\\fluentvalidation\\12.1.1\\fluentvalidation.12.1.1.nupkg.sha512",
+    "C:\\Users\\ALI\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\12.1.1\\fluentvalidation.dependencyinjectionextensions.12.1.1.nupkg.sha512",
+    "C:\\Users\\ALI\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\ALI\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\ALI\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",
+    "C:\\Users\\ALI\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
+    "C:\\Users\\ALI\\.nuget\\packages\\nettopologysuite\\2.6.0\\nettopologysuite.2.6.0.nupkg.sha512",
+    "C:\\Users\\ALI\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
