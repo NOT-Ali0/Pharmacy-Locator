@@ -824,35 +824,6 @@
           "lib/netstandard2.0/Mono.TextTemplating.dll": {}
         }
       },
-      "NetTopologySuite/2.6.0": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.1/NetTopologySuite.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.1/NetTopologySuite.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "NetTopologySuite.IO.PostGis/2.1.0": {
-        "type": "package",
-        "dependencies": {
-          "NetTopologySuite": "[2.0.0, 3.0.0-A)"
-        },
-        "compile": {
-          "lib/netstandard2.1/NetTopologySuite.IO.PostGis.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.1/NetTopologySuite.IO.PostGis.dll": {
-            "related": ".xml"
-          }
-        }
-      },
       "Npgsql/8.0.0": {
         "type": "package",
         "dependencies": {
@@ -884,44 +855,6 @@
         },
         "runtime": {
           "lib/net8.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Npgsql.EntityFrameworkCore.PostgreSQL.NetTopologySuite/8.0.0": {
-        "type": "package",
-        "dependencies": {
-          "Npgsql.EntityFrameworkCore.PostgreSQL": "8.0.0",
-          "Npgsql.NetTopologySuite": "8.0.0"
-        },
-        "compile": {
-          "lib/net8.0/Npgsql.EntityFrameworkCore.PostgreSQL.NetTopologySuite.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net8.0/Npgsql.EntityFrameworkCore.PostgreSQL.NetTopologySuite.dll": {
-            "related": ".xml"
-          }
-        },
-        "build": {
-          "build/netstandard2.0/_._": {}
-        }
-      },
-      "Npgsql.NetTopologySuite/8.0.0": {
-        "type": "package",
-        "dependencies": {
-          "NetTopologySuite": "2.5.0",
-          "NetTopologySuite.IO.PostGIS": "2.1.0",
-          "Npgsql": "8.0.0"
-        },
-        "compile": {
-          "lib/netstandard2.0/Npgsql.NetTopologySuite.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.0/Npgsql.NetTopologySuite.dll": {
             "related": ".xml"
           }
         }
@@ -1294,9 +1227,6 @@
       "Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
-        "dependencies": {
-          "NetTopologySuite": "2.6.0"
-        },
         "compile": {
           "bin/placeholder/Domain.dll": {}
         },
@@ -1313,7 +1243,6 @@
           "Microsoft.Extensions.Configuration.Abstractions": "8.0.0",
           "Microsoft.Extensions.Options.ConfigurationExtensions": "8.0.0",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "8.0.0",
-          "Npgsql.EntityFrameworkCore.PostgreSQL.NetTopologySuite": "8.0.0",
           "System.IdentityModel.Tokens.Jwt": "8.15.0"
         },
         "compile": {
@@ -2888,37 +2817,6 @@
         "mono.texttemplating.nuspec"
       ]
     },
-    "NetTopologySuite/2.6.0": {
-      "sha512": "1B1OTacTd4QtFyBeuIOcThwSSLUdRZU3bSFIwM8vk36XiZlBMi3K36u74e4OqwwHRHUuJC1PhbDx4hyI266X1Q==",
-      "type": "package",
-      "path": "nettopologysuite/2.6.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "icon.png",
-        "lib/netstandard2.0/NetTopologySuite.dll",
-        "lib/netstandard2.0/NetTopologySuite.xml",
-        "lib/netstandard2.1/NetTopologySuite.dll",
-        "lib/netstandard2.1/NetTopologySuite.xml",
-        "nettopologysuite.2.6.0.nupkg.sha512",
-        "nettopologysuite.nuspec"
-      ]
-    },
-    "NetTopologySuite.IO.PostGis/2.1.0": {
-      "sha512": "3W8XTFz8iP6GQ5jDXK1/LANHiU+988k1kmmuPWNKcJLpmSg6CvFpbTpz+s4+LBzkAp64wHGOldSlkSuzYfrIKA==",
-      "type": "package",
-      "path": "nettopologysuite.io.postgis/2.1.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/netstandard2.0/NetTopologySuite.IO.PostGis.dll",
-        "lib/netstandard2.0/NetTopologySuite.IO.PostGis.xml",
-        "lib/netstandard2.1/NetTopologySuite.IO.PostGis.dll",
-        "lib/netstandard2.1/NetTopologySuite.IO.PostGis.xml",
-        "nettopologysuite.io.postgis.2.1.0.nupkg.sha512",
-        "nettopologysuite.io.postgis.nuspec"
-      ]
-    },
     "Npgsql/8.0.0": {
       "sha512": "Qiz74U+O7Mv4knrsXgKVYGJjgwoziK+aMFZqz7PtKR3vyGIhZA0tnW6HoUnL3X+YqtmVuhmoKkN8LDWEHMxPbw==",
       "type": "package",
@@ -2954,37 +2852,6 @@
         "lib/net8.0/Npgsql.EntityFrameworkCore.PostgreSQL.xml",
         "npgsql.entityframeworkcore.postgresql.8.0.0.nupkg.sha512",
         "npgsql.entityframeworkcore.postgresql.nuspec",
-        "postgresql.png"
-      ]
-    },
-    "Npgsql.EntityFrameworkCore.PostgreSQL.NetTopologySuite/8.0.0": {
-      "sha512": "B6BKAdg2PNjBQvYqFJ200L9TOe96V4G4T0dkopoxZN4/muANUy+OHS+pdv5Jk/ui5o0XgQ0fQqauR+1e0/4g3A==",
-      "type": "package",
-      "path": "npgsql.entityframeworkcore.postgresql.nettopologysuite/8.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "README.md",
-        "build/netstandard2.0/Npgsql.EntityFrameworkCore.PostgreSQL.NetTopologySuite.targets",
-        "lib/net8.0/Npgsql.EntityFrameworkCore.PostgreSQL.NetTopologySuite.dll",
-        "lib/net8.0/Npgsql.EntityFrameworkCore.PostgreSQL.NetTopologySuite.xml",
-        "npgsql.entityframeworkcore.postgresql.nettopologysuite.8.0.0.nupkg.sha512",
-        "npgsql.entityframeworkcore.postgresql.nettopologysuite.nuspec",
-        "postgresql.png"
-      ]
-    },
-    "Npgsql.NetTopologySuite/8.0.0": {
-      "sha512": "H9DJmVrLlyhZJj5SQVzPTHbeK4eQ84ZldP/HNHU74t4ingy4q8lxSuJ0/0sUXwYLHNsg1OwZi9G+RRUCg+vZbA==",
-      "type": "package",
-      "path": "npgsql.nettopologysuite/8.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "README.md",
-        "lib/netstandard2.0/Npgsql.NetTopologySuite.dll",
-        "lib/netstandard2.0/Npgsql.NetTopologySuite.xml",
-        "npgsql.nettopologysuite.8.0.0.nupkg.sha512",
-        "npgsql.nettopologysuite.nuspec",
         "postgresql.png"
       ]
     },

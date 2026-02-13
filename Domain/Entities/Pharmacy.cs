@@ -1,4 +1,4 @@
-using NetTopologySuite.Geometries;
+using Domain.Entities;
 
 namespace Domain.Entities;
 
@@ -7,7 +7,8 @@ public class Pharmacy
     public Guid Id { get; set; } = Guid.NewGuid();
     public Guid UserId { get; set; }
     public string Name { get; set; } = string.Empty;
-    public Point Location { get; set; } = null!; // PostGIS Point
+    public double Latitude { get; set; }
+    public double Longitude { get; set; }
     public string PhoneNumber { get; set; } = string.Empty;
 
     public User User { get; set; } = null!;

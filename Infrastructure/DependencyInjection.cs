@@ -15,13 +15,14 @@ public static class DependencyInjection
         // Database
         services.AddDbContext<AppDbContext>(options =>
             options.UseNpgsql(
-                configuration.GetConnectionString("DefaultConnection"),
-                o => o.UseNetTopologySuite()
+                configuration.GetConnectionString("DefaultConnection")
             ));
 
         // Repositories
         services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
         services.AddScoped<IPharmacyRepository, PharmacyRepository>();
+        services.AddScoped<ISupplierRepository, SupplierRepository>();
+        services.AddScoped<IOrderRepository, OrderRepository>();
 
         // Services
         services.AddScoped<IJwtTokenGenerator, JwtTokenGenerator>();

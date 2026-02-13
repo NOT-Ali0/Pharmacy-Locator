@@ -2,7 +2,8 @@ using Application.DTOs;
 using Application.Interfaces;
 using AutoMapper;
 using Domain.Entities;
-using NetTopologySuite.Geometries;
+using AutoMapper;
+using Domain.Entities;
 
 namespace Application.Services;
 
@@ -31,27 +32,18 @@ public class PharmacyService : IPharmacyService
 
         var pharmacy = _mapper.Map<Pharmacy>(pharmacyDto);
         pharmacy.UserId = userId;
-        
-        // Ensure Location is set correctly if AutoMapper didn't handle SRID 4326 via constructor/factory
-        if (pharmacy.Location != null && pharmacy.Location.SRID != 4326)
-            pharmacy.Location.SRID = 4326;
             
         await _pharmacyRepository.AddAsync(pharmacy);
     }
 
     public async Task<IEnumerable<PharmacySearchResultDto>> SearchMedicineAsync(SearchMedicineRequest request)
     {
-        var pharmacies = await _pharmacyRepository.GetNearestPharmaciesAsync(request.MedicineName, request.UserLat, request.UserLng, 3);
+        var pharmacies = await _pharmacyRepository.SearchPharmaciesAsync(request.MedicineName, 3);
         
-        var userLocation = new Point(request.UserLng, request.UserLat) { SRID = 4326 };
-
         return pharmacies.Select(p => new PharmacySearchResultDto(
             p.Name,
-            $"Lat: {p.Location.Y}, Lng: {p.Location.X}", // Simplified address
-            p.Location.Distance(userLocation), // Distance in degrees, needs conversion for real use but MVP is fine. PostGIS returns meters usually if projected, but SRID 4326 is degrees. 
-            // Better to let PostGIS calculate distance in meters in the query, but Repository interface returns Entities.
-            // For MVP, simplistic distance is okay or we can assume Repository handles ranking.
-            true // Assumed available if returned by GetNearestPharmaciesAsync
+            $"Lat: {p.Latitude}, Lng: {p.Longitude}", 
+            true
         ));
     }
 

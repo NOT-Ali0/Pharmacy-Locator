@@ -18,4 +18,17 @@ public record PharmacyDto
 }
 public record MedicineDto(Guid Id, string Name, string Description, bool? IsAvailable);
 public record SearchMedicineRequest(string MedicineName, double UserLat, double UserLng);
-public record PharmacySearchResultDto(string PharmacyName, string Address, double Distance, bool Available);
+public record PharmacySearchResultDto(string PharmacyName, string Address, bool Available);
+
+// Supplier DTOs
+public record SupplierDto(Guid Id, string Name, string PhoneNumber, string Address, double Latitude, double Longitude, string ServicesDescription, List<SupplierMedicineDto> Medicines);
+public record SupplierMedicineDto(Guid MedicineId, string MedicineName, decimal WholesalePrice, int MinimumOrderQuantity, int StockQuantity);
+public record UpdateSupplierMedicineDto(decimal WholesalePrice, int MinimumOrderQuantity, int StockQuantity);
+public record AddSupplierMedicineDto(Guid MedicineId, decimal WholesalePrice, int MinimumOrderQuantity, int StockQuantity);
+
+// Order DTOs
+public record OrderDto(Guid Id, Guid PharmacyId, string PharmacyName, Guid SupplierId, string SupplierName, DateTime OrderDate, string Status, decimal TotalAmount, List<OrderItemDto> Items);
+public record OrderItemDto(Guid MedicineId, string MedicineName, int Quantity, decimal UnitPrice);
+public record CreateOrderDto(Guid SupplierId, List<CreateOrderItemDto> Items);
+public record CreateOrderItemDto(Guid MedicineId, int Quantity);
+

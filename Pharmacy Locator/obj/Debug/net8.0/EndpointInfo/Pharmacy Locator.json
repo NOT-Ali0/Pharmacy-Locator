@@ -108,6 +108,18 @@
         }
       }
     },
+    "/api/Pharmacy/me": {
+      "get": {
+        "tags": [
+          "Pharmacy"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Pharmacy": {
       "post": {
         "tags": [
@@ -139,7 +151,83 @@
         }
       }
     },
-    "/api/Pharmacy/search": {
+    "/api/Pharmacy/suppliers": {
+      "get": {
+        "tags": [
+          "Pharmacy"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Pharmacy/suppliers/{supplierId}/medicines": {
+      "get": {
+        "tags": [
+          "Pharmacy"
+        ],
+        "parameters": [
+          {
+            "name": "supplierId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Pharmacy/orders": {
+      "post": {
+        "tags": [
+          "Pharmacy"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateOrderDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateOrderDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateOrderDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "Pharmacy"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Pharmacy/search-medicine": {
       "get": {
         "tags": [
           "Pharmacy"
@@ -176,26 +264,14 @@
         }
       }
     },
-    "/api/Pharmacy/me": {
-      "get": {
-        "tags": [
-          "Pharmacy"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/Pharmacy/medicines/{id}": {
+    "/api/Pharmacy/medicines/{medicineId}": {
       "put": {
         "tags": [
           "Pharmacy"
         ],
         "parameters": [
           {
-            "name": "id",
+            "name": "medicineId",
             "in": "path",
             "required": true,
             "schema": {
@@ -235,7 +311,7 @@
         ],
         "parameters": [
           {
-            "name": "id",
+            "name": "medicineId",
             "in": "path",
             "required": true,
             "schema": {
@@ -250,10 +326,223 @@
           }
         }
       }
+    },
+    "/api/Supplier/me": {
+      "get": {
+        "tags": [
+          "Supplier"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Supplier/medicines": {
+      "post": {
+        "tags": [
+          "Supplier"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddSupplierMedicineDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddSupplierMedicineDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddSupplierMedicineDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Supplier/medicines/{medicineId}": {
+      "put": {
+        "tags": [
+          "Supplier"
+        ],
+        "parameters": [
+          {
+            "name": "medicineId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateSupplierMedicineDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateSupplierMedicineDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateSupplierMedicineDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Supplier"
+        ],
+        "parameters": [
+          {
+            "name": "medicineId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Supplier/orders": {
+      "get": {
+        "tags": [
+          "Supplier"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Supplier/orders/{orderId}/status": {
+      "put": {
+        "tags": [
+          "Supplier"
+        ],
+        "parameters": [
+          {
+            "name": "orderId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "string"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "string"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
     }
   },
   "components": {
     "schemas": {
+      "AddSupplierMedicineDto": {
+        "type": "object",
+        "properties": {
+          "medicineId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "wholesalePrice": {
+            "type": "number",
+            "format": "double"
+          },
+          "minimumOrderQuantity": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "stockQuantity": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CreateOrderDto": {
+        "type": "object",
+        "properties": {
+          "supplierId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CreateOrderItemDto"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CreateOrderItemDto": {
+        "type": "object",
+        "properties": {
+          "medicineId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "quantity": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
       "LoginRequest": {
         "type": "object",
         "properties": {
@@ -344,10 +633,29 @@
         },
         "additionalProperties": false
       },
+      "UpdateSupplierMedicineDto": {
+        "type": "object",
+        "properties": {
+          "wholesalePrice": {
+            "type": "number",
+            "format": "double"
+          },
+          "minimumOrderQuantity": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "stockQuantity": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
       "UserRole": {
         "enum": [
           0,
-          1
+          1,
+          2
         ],
         "type": "integer",
         "format": "int32"

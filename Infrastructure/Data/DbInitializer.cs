@@ -2,7 +2,6 @@ using Domain.Entities;
 using Domain.Enums;
 using Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
-using NetTopologySuite.Geometries;
 
 namespace Infrastructure.Data;
 
@@ -45,7 +44,8 @@ public static class DbInitializer
         {
             UserId = pharmacyUser.Id,
             Name = "Downtown Pharmacy",
-            Location = new Point(46.6753, 24.7136) { SRID = 4326 }, // Example coords (Riyadh roughly)
+            Latitude = 46.6753, // Example coords (Riyadh roughly)
+            Longitude = 24.7136, 
             PhoneNumber = "1234567890"
         };
         context.Pharmacies.Add(pharmacy);

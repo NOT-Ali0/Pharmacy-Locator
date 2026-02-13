@@ -4,7 +4,6 @@ using Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using NetTopologySuite.Geometries;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 #nullable disable
@@ -21,7 +20,6 @@ namespace Infrastructure.Migrations
                 .HasAnnotation("ProductVersion", "8.0.0")
                 .HasAnnotation("Relational:MaxIdentifierLength", 63);
 
-            NpgsqlModelBuilderExtensions.HasPostgresExtension(modelBuilder, "postgis");
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
             modelBuilder.Entity("Domain.Entities.Medicine", b =>
@@ -43,15 +41,68 @@ namespace Infrastructure.Migrations
                     b.ToTable("Medicines");
                 });
 
+            modelBuilder.Entity("Domain.Entities.Order", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<DateTime>("OrderDate")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<Guid>("PharmacyId")
+                        .HasColumnType("uuid");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("integer");
+
+                    b.Property<Guid>("SupplierId")
+                        .HasColumnType("uuid");
+
+                    b.Property<decimal>("TotalAmount")
+                        .HasColumnType("numeric");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("PharmacyId");
+
+                    b.HasIndex("SupplierId");
+
+                    b.ToTable("Orders");
+                });
+
+            modelBuilder.Entity("Domain.Entities.OrderItem", b =>
+                {
+                    b.Property<Guid>("OrderId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("MedicineId")
+                        .HasColumnType("uuid");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("integer");
+
+                    b.Property<decimal>("UnitPrice")
+                        .HasColumnType("numeric");
+
+                    b.HasKey("OrderId", "MedicineId");
+
+                    b.HasIndex("MedicineId");
+
+                    b.ToTable("OrderItems");
+                });
+
             modelBuilder.Entity("Domain.Entities.Pharmacy", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uuid");
 
-                    b.Property<Point>("Location")
-                        .IsRequired()
-                        .HasColumnType("geometry");
+                    b.Property<double>("Latitude")
+                        .HasColumnType("double precision");
+
+                    b.Property<double>("Longitude")
+                        .HasColumnType("double precision");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -99,6 +150,69 @@ namespace Infrastructure.Migrations
                     b.ToTable("PharmacyMedicines");
                 });
 
+            modelBuilder.Entity("Domain.Entities.Supplier", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Address")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<double>("Latitude")
+                        .HasColumnType("double precision");
+
+                    b.Property<double>("Longitude")
+                        .HasColumnType("double precision");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("PhoneNumber")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("ServicesDescription")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId")
+                        .IsUnique();
+
+                    b.ToTable("Suppliers");
+                });
+
+            modelBuilder.Entity("Domain.Entities.SupplierMedicine", b =>
+                {
+                    b.Property<Guid>("SupplierId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("MedicineId")
+                        .HasColumnType("uuid");
+
+                    b.Property<int>("MinimumOrderQuantity")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("StockQuantity")
+                        .HasColumnType("integer");
+
+                    b.Property<decimal>("WholesalePrice")
+                        .HasColumnType("numeric");
+
+                    b.HasKey("SupplierId", "MedicineId");
+
+                    b.HasIndex("MedicineId");
+
+                    b.ToTable("SupplierMedicines");
+                });
+
             modelBuilder.Entity("Domain.Entities.User", b =>
                 {
                     b.Property<Guid>("Id")
@@ -123,6 +237,44 @@ namespace Infrastructure.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Users");
+                });
+
+            modelBuilder.Entity("Domain.Entities.Order", b =>
+                {
+                    b.HasOne("Domain.Entities.Pharmacy", "Pharmacy")
+                        .WithMany()
+                        .HasForeignKey("PharmacyId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Domain.Entities.Supplier", "Supplier")
+                        .WithMany()
+                        .HasForeignKey("SupplierId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Pharmacy");
+
+                    b.Navigation("Supplier");
+                });
+
+            modelBuilder.Entity("Domain.Entities.OrderItem", b =>
+                {
+                    b.HasOne("Domain.Entities.Medicine", "Medicine")
+                        .WithMany()
+                        .HasForeignKey("MedicineId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Domain.Entities.Order", "Order")
+                        .WithMany("OrderItems")
+                        .HasForeignKey("OrderId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Medicine");
+
+                    b.Navigation("Order");
                 });
 
             modelBuilder.Entity("Domain.Entities.Pharmacy", b =>
@@ -155,9 +307,44 @@ namespace Infrastructure.Migrations
                     b.Navigation("Pharmacy");
                 });
 
+            modelBuilder.Entity("Domain.Entities.Supplier", b =>
+                {
+                    b.HasOne("Domain.Entities.User", "User")
+                        .WithOne("Supplier")
+                        .HasForeignKey("Domain.Entities.Supplier", "UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("Domain.Entities.SupplierMedicine", b =>
+                {
+                    b.HasOne("Domain.Entities.Medicine", "Medicine")
+                        .WithMany()
+                        .HasForeignKey("MedicineId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Domain.Entities.Supplier", "Supplier")
+                        .WithMany("SupplierMedicines")
+                        .HasForeignKey("SupplierId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Medicine");
+
+                    b.Navigation("Supplier");
+                });
+
             modelBuilder.Entity("Domain.Entities.Medicine", b =>
                 {
                     b.Navigation("PharmacyMedicines");
+                });
+
+            modelBuilder.Entity("Domain.Entities.Order", b =>
+                {
+                    b.Navigation("OrderItems");
                 });
 
             modelBuilder.Entity("Domain.Entities.Pharmacy", b =>
@@ -165,9 +352,16 @@ namespace Infrastructure.Migrations
                     b.Navigation("PharmacyMedicines");
                 });
 
+            modelBuilder.Entity("Domain.Entities.Supplier", b =>
+                {
+                    b.Navigation("SupplierMedicines");
+                });
+
             modelBuilder.Entity("Domain.Entities.User", b =>
                 {
                     b.Navigation("Pharmacy");
+
+                    b.Navigation("Supplier");
                 });
 #pragma warning restore 612, 618
         }
