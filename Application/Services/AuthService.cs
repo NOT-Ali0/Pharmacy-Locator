@@ -5,23 +5,12 @@ using Domain.Enums;
 
 namespace Application.Services;
 
-public class AuthService : IAuthService
+public class AuthService(IRepository<User> userRepository, IJwtTokenGenerator jwtTokenGenerator) : IAuthService
 {
-    private readonly IRepository<User> _userRepository;
-    private readonly IJwtTokenGenerator _jwtTokenGenerator;
-    // Password hashing needed here, usually via interface or helper. 
-    // I'll add IPasswordHasher to interfaces.
-    
-    public AuthService(IRepository<User> userRepository, IJwtTokenGenerator jwtTokenGenerator)
-    {
-        _userRepository = userRepository;
-        _jwtTokenGenerator = jwtTokenGenerator;
-    }
-
     public async Task<string> RegisterAsync(User user, string password)
     {
         // Check if email exists
-        var existingUsers = await _userRepository.FindAsync(u => u.Email == user.Email);
+        var existingUsers = await userRepository.FindAsync(u => u.Email == user.Email);
         if (existingUsers.Any())
         {
             throw new Exception("Email already exists.");
@@ -32,14 +21,14 @@ public class AuthService : IAuthService
         // Let's rely on an interface.
         user.PasswordHash = BCrypt.Net.BCrypt.HashPassword(password);
 
-        await _userRepository.AddAsync(user);
+        await userRepository.AddAsync(user);
         
-        return _jwtTokenGenerator.GenerateToken(user);
+        return jwtTokenGenerator.GenerateToken(user);
     }
 
-    public async Task<string?> LoginAsync(string email, string password)
+    public async Task<LoginResponseDto?> LoginAsync(string email, string password)
     {
-        var users = await _userRepository.FindAsync(u => u.Email == email);
+        var users = await userRepository.FindAsync(u => u.Email == email);
         var user = users.FirstOrDefault();
 
         if (user is null || !BCrypt.Net.BCrypt.Verify(password, user.PasswordHash))
@@ -47,6 +36,18 @@ public class AuthService : IAuthService
             return null;
         }
 
-        return _jwtTokenGenerator.GenerateToken(user);
+        return new LoginResponseDto(
+
+            Token: jwtTokenGenerator.GenerateToken(user),
+            new UserDto(
+                Id: user.Id,
+                Name: user.Name,
+                Email: user.Email,
+                Role: UserRole.Customer
+            )
+            );
     }
+
+
+    
 }

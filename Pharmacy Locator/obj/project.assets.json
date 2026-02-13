@@ -3565,23 +3565,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ALI\\.nuget\\packages\\": {},
+    "C:\\Users\\Yone\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\Pharmacy-Locator1\\Pharmacy-Locator\\Pharmacy Locator\\Pharmacy Locator.csproj",
+      "projectUniqueName": "C:\\Users\\Yone\\Source\\Repos\\Pharmacy-Locator\\Pharmacy Locator\\Pharmacy Locator.csproj",
       "projectName": "Pharmacy Locator",
-      "projectPath": "F:\\Pharmacy-Locator1\\Pharmacy-Locator\\Pharmacy Locator\\Pharmacy Locator.csproj",
-      "packagesPath": "C:\\Users\\ALI\\.nuget\\packages\\",
-      "outputPath": "F:\\Pharmacy-Locator1\\Pharmacy-Locator\\Pharmacy Locator\\obj\\",
+      "projectPath": "C:\\Users\\Yone\\Source\\Repos\\Pharmacy-Locator\\Pharmacy Locator\\Pharmacy Locator.csproj",
+      "packagesPath": "C:\\Users\\Yone\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Yone\\Source\\Repos\\Pharmacy-Locator\\Pharmacy Locator\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\ALI\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Yone\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -3596,11 +3596,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "F:\\Pharmacy-Locator1\\Pharmacy-Locator\\Application\\Application.csproj": {
-              "projectPath": "F:\\Pharmacy-Locator1\\Pharmacy-Locator\\Application\\Application.csproj"
+            "C:\\Users\\Yone\\Source\\Repos\\Pharmacy-Locator\\Application\\Application.csproj": {
+              "projectPath": "C:\\Users\\Yone\\Source\\Repos\\Pharmacy-Locator\\Application\\Application.csproj"
             },
-            "F:\\Pharmacy-Locator1\\Pharmacy-Locator\\Infrastructure\\Infrastructure.csproj": {
-              "projectPath": "F:\\Pharmacy-Locator1\\Pharmacy-Locator\\Infrastructure\\Infrastructure.csproj"
+            "C:\\Users\\Yone\\Source\\Repos\\Pharmacy-Locator\\Infrastructure\\Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\Yone\\Source\\Repos\\Pharmacy-Locator\\Infrastructure\\Infrastructure.csproj"
             }
           }
         }
@@ -3655,7 +3655,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

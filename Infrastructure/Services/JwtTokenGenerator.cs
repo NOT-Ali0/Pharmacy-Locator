@@ -8,20 +8,13 @@ using System.Text;
 
 namespace Infrastructure.Services;
 
-public class JwtTokenGenerator : IJwtTokenGenerator
+public class JwtTokenGenerator(IConfiguration configuration) : IJwtTokenGenerator
 {
-    private readonly IConfiguration _configuration;
-
-    public JwtTokenGenerator(IConfiguration configuration)
-    {
-        _configuration = configuration;
-    }
-
     public string GenerateToken(User user)
     {
-        var secretKey = _configuration["JwtSettings:Secret"];
-        var issuer = _configuration["JwtSettings:Issuer"];
-        var audience = _configuration["JwtSettings:Audience"];
+        var secretKey = configuration["JwtSettings:Secret"];
+        var issuer = configuration["JwtSettings:Issuer"];
+        var audience = configuration["JwtSettings:Audience"];
 
         if (string.IsNullOrEmpty(secretKey))
         {

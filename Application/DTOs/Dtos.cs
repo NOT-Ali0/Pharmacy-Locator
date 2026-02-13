@@ -4,7 +4,18 @@ namespace Application.DTOs;
 
 public record RegisterRequest(string Name, string Email, string Password, UserRole Role);
 public record LoginRequest(string Email, string Password);
-public record PharmacyDto(Guid Id, string Name, double Latitude, double Longitude, string PhoneNumber);
-public record MedicineDto(Guid Id, string Name, string Description);
+public record LoginResponseDto(string Token, UserDto User);
+public record UserDto(Guid Id, string Name, string Email, UserRole Role);
+//public record PharmacyDto(Guid Id, string Name, double Latitude, double Longitude, string PhoneNumber, List<MedicineDto> Medicines = null!);
+public record PharmacyDto
+{
+    public Guid Id { get; set; }
+    public string Name { get; set; } = null!;
+    public double Latitude { get; set; }
+    public double Longitude { get; set; }
+    public string PhoneNumber { get; set; } = null!;
+    public List<MedicineDto> Medicines { get; set; } = new List<MedicineDto>();
+}
+public record MedicineDto(Guid Id, string Name, string Description, bool? IsAvailable);
 public record SearchMedicineRequest(string MedicineName, double UserLat, double UserLng);
 public record PharmacySearchResultDto(string PharmacyName, string Address, double Distance, bool Available);

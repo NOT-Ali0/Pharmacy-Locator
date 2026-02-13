@@ -41,23 +41,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ALI\\.nuget\\packages\\": {},
+    "C:\\Users\\Yone\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\Pharmacy-Locator1\\Pharmacy-Locator\\Domain\\Domain.csproj",
+      "projectUniqueName": "C:\\Users\\Yone\\Source\\Repos\\Pharmacy-Locator\\Domain\\Domain.csproj",
       "projectName": "Domain",
-      "projectPath": "F:\\Pharmacy-Locator1\\Pharmacy-Locator\\Domain\\Domain.csproj",
-      "packagesPath": "C:\\Users\\ALI\\.nuget\\packages\\",
-      "outputPath": "F:\\Pharmacy-Locator1\\Pharmacy-Locator\\Domain\\obj\\",
+      "projectPath": "C:\\Users\\Yone\\Source\\Repos\\Pharmacy-Locator\\Domain\\Domain.csproj",
+      "packagesPath": "C:\\Users\\Yone\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Yone\\Source\\Repos\\Pharmacy-Locator\\Domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\ALI\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Yone\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -111,7 +111,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

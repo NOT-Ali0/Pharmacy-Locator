@@ -75,6 +75,53 @@
   },
   {
     "ContainingType": "Pharmacy_Locator.Controllers.PharmacyController",
+    "Method": "GetMyPharmacy",
+    "RelativePath": "api/Pharmacy/me",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Pharmacy_Locator.Controllers.PharmacyController",
+    "Method": "UpdateMedicineAvailability",
+    "RelativePath": "api/Pharmacy/medicines/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "isAvailable",
+        "Type": "System.Boolean",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Pharmacy_Locator.Controllers.PharmacyController",
+    "Method": "DeleteMedicine",
+    "RelativePath": "api/Pharmacy/medicines/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Pharmacy_Locator.Controllers.PharmacyController",
     "Method": "Search",
     "RelativePath": "api/Pharmacy/search",
     "HttpMethod": "GET",

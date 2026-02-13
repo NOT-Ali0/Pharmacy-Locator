@@ -19,6 +19,16 @@ public class PharmacyService : IPharmacyService
 
     public async Task AddPharmacyAsync(PharmacyDto pharmacyDto, Guid userId)
     {
+
+        var existingPharmacy = await _pharmacyRepository
+        .FindAsync(p => p.UserId == userId);
+
+        if (existingPharmacy.Any())
+        {
+            throw new Exception("This user already has a pharmacy.");
+        }
+
+
         var pharmacy = _mapper.Map<Pharmacy>(pharmacyDto);
         pharmacy.UserId = userId;
         
@@ -43,5 +53,35 @@ public class PharmacyService : IPharmacyService
             // For MVP, simplistic distance is okay or we can assume Repository handles ranking.
             true // Assumed available if returned by GetNearestPharmaciesAsync
         ));
+    }
+
+    public async Task<PharmacyDto?> GetMyPharmacyAsync(Guid userId)
+    {
+        var pharmacy = await _pharmacyRepository.GetByUserIdAsync(userId);
+        if (pharmacy == null) return null;
+        return _mapper.Map<PharmacyDto>(pharmacy);
+    }
+
+    public async Task UpdateMedicineAvailabilityAsync(Guid userId, Guid medicineId, bool isAvailable)
+    {
+        var pharmacy = await _pharmacyRepository.GetByUserIdAsync(userId);
+        if (pharmacy == null) throw new Exception("Pharmacy not found");
+
+        var medicine = await _pharmacyRepository.GetMedicineByIdAsync(pharmacy.Id, medicineId);
+        if (medicine == null) throw new KeyNotFoundException("Medicine not found in your pharmacy");
+
+        medicine.IsAvailable = isAvailable;
+        await _pharmacyRepository.UpdateMedicineAsync(medicine);
+    }
+
+    public async Task DeleteMedicineAsync(Guid userId, Guid medicineId)
+    {
+        var pharmacy = await _pharmacyRepository.GetByUserIdAsync(userId);
+        if (pharmacy == null) throw new Exception("Pharmacy not found");
+
+        var medicine = await _pharmacyRepository.GetMedicineByIdAsync(pharmacy.Id, medicineId);
+        if (medicine == null) throw new KeyNotFoundException("Medicine not found in your pharmacy");
+
+        await _pharmacyRepository.DeleteMedicineAsync(medicine);
     }
 }
