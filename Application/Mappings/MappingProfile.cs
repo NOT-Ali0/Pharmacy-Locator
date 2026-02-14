@@ -11,8 +11,12 @@ public class MappingProfile : Profile
     {
         CreateMap<RegisterRequest, User>();
         CreateMap<Pharmacy, PharmacyDto>()
-            .ForMember(d => d.Medicines, opt => opt.MapFrom(s => s.PharmacyMedicines))
-            .ReverseMap();
+            .ForMember(d => d.Medicines, opt => opt.MapFrom(s => s.PharmacyMedicines));
+
+        CreateMap<PharmacyDto, Pharmacy>()
+            .ForMember(d => d.Id, opt => opt.Ignore()) // Do not map ID if it's generated, or map if provided. Usually DTO -> Entity creation ignores ID.
+            .ForMember(d => d.PharmacyMedicines, opt => opt.Ignore())
+            .ForMember(d => d.User, opt => opt.Ignore());
 
         CreateMap<Medicine, MedicineDto>()
             .ForCtorParam("Id", opt => opt.MapFrom(s => s.Id))

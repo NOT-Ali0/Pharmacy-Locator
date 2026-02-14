@@ -3,6 +3,8 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
+#pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
+
 namespace Infrastructure.Migrations
 {
     /// <inheritdoc />
@@ -46,8 +48,7 @@ namespace Infrastructure.Migrations
                     Id = table.Column<Guid>(type: "uuid", nullable: false),
                     UserId = table.Column<Guid>(type: "uuid", nullable: false),
                     Name = table.Column<string>(type: "text", nullable: false),
-                    Latitude = table.Column<double>(type: "double precision", nullable: false),
-                    Longitude = table.Column<double>(type: "double precision", nullable: false),
+                    Address = table.Column<string>(type: "text", nullable: false),
                     PhoneNumber = table.Column<string>(type: "text", nullable: false)
                 },
                 constraints: table =>
@@ -70,8 +71,6 @@ namespace Infrastructure.Migrations
                     Name = table.Column<string>(type: "text", nullable: false),
                     PhoneNumber = table.Column<string>(type: "text", nullable: false),
                     Address = table.Column<string>(type: "text", nullable: false),
-                    Latitude = table.Column<double>(type: "double precision", nullable: false),
-                    Longitude = table.Column<double>(type: "double precision", nullable: false),
                     ServicesDescription = table.Column<string>(type: "text", nullable: false)
                 },
                 constraints: table =>
@@ -191,6 +190,65 @@ namespace Infrastructure.Migrations
                         principalTable: "Orders",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.InsertData(
+                table: "Medicines",
+                columns: new[] { "Id", "Description", "Name" },
+                values: new object[,]
+                {
+                    { new Guid("a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d"), "Paracetamol 500mg for pain relief and fever.", "Panadol Advance" },
+                    { new Guid("b2c3d4e5-f6a7-4b6c-9d0e-1f2a3b4c5d6e"), "Amoxicillin 500mg Broad-spectrum antibiotic.", "Amoxil" },
+                    { new Guid("c3d4e5f6-a7b8-4c7d-0e1f-2a3b4c5d6e7f"), "Diclofenac Sodium 50mg Non-steroidal anti-inflammatory drug (NSAID).", "Voltaren" },
+                    { new Guid("d4e5f6a7-b8c9-4d8e-1f2a-3b4c5d6e7f8a"), "Furosemide 40mg Diuretic for fluid retention.", "Lasix" },
+                    { new Guid("e5f6a7b8-c9d0-4e9f-2a3b-4c5d6e7f8a9b"), "Co-amoxiclav 1g Antibiotic for bacterial infections.", "Augmentin" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Users",
+                columns: new[] { "Id", "Email", "Name", "PasswordHash", "Role" },
+                values: new object[,]
+                {
+                    { new Guid("f1a2b3c4-d5e6-4a5b-8c9d-0e1f2a3b4c5d"), "admin@iqpharma.com", "Iraqi Pharma Admin", "AQAAAAEAACcQAAAAE...", 2 },
+                    { new Guid("f2b3c4d5-e6f7-4b6c-9d0e-1f2a3b4c5d6e"), "admin@pioneer.iq", "Pioneer Admin", "AQAAAAEAACcQAAAAE...", 2 },
+                    { new Guid("f3c4d5e6-f7a8-4c7d-0e1f-2a3b4c5d6e7f"), "admin@mansour.com", "Mansour Pharma Admin", "AQAAAAEAACcQAAAAE...", 2 },
+                    { new Guid("f4d5e6f7-a8b9-4d8e-1f2a-3b4c5d6e7f8a"), "owner@baghdadpharma.com", "Baghdad Pharmacy Owner", "AQAAAAEAACcQAAAAE...", 1 },
+                    { new Guid("f5e6f7a8-b9c0-4e9f-2a3b-4c5d6e7f8a9b"), "owner@erbilpharma.com", "Erbil Pharmacy Owner", "AQAAAAEAACcQAAAAE...", 1 },
+                    { new Guid("f6f7a8b9-c0d1-4f0a-3b4c-5d6e7f8a9b0c"), "owner@basrapharma.com", "Basra Pharmacy Owner", "AQAAAAEAACcQAAAAE...", 1 }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Pharmacies",
+                columns: new[] { "Id", "Address", "Name", "PhoneNumber", "UserId" },
+                values: new object[,]
+                {
+                    { new Guid("77777777-1111-2222-3333-444444444444"), "Baghdad, Palestine St", "Al-Amal Pharmacy", "+9647811122233", new Guid("f4d5e6f7-a8b9-4d8e-1f2a-3b4c5d6e7f8a") },
+                    { new Guid("88888888-1111-2222-3333-444444444444"), "Erbil, 60 Meter Rd", "Zheen Pharmacy", "+9647501112223", new Guid("f5e6f7a8-b9c0-4e9f-2a3b-4c5d6e7f8a9b") },
+                    { new Guid("99999999-1111-2222-3333-444444444444"), "Basra, Corniche", "Al-Fayhaa Pharmacy", "+9647711122233", new Guid("f6f7a8b9-c0d1-4f0a-3b4c-5d6e7f8a9b0c") }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Suppliers",
+                columns: new[] { "Id", "Address", "Name", "PhoneNumber", "ServicesDescription", "UserId" },
+                values: new object[,]
+                {
+                    { new Guid("11111111-2222-3333-4444-555555555555"), "Baghdad, Al-Mansour District", "Iraqi Pharmaceutical Industry", "+9647801234567", "Local manufacturer and wholesale distributor.", new Guid("f1a2b3c4-d5e6-4a5b-8c9d-0e1f2a3b4c5d") },
+                    { new Guid("22222222-3333-4444-5555-666666666666"), "Erbil, Industrial Zone", "Pioneer Pharmaceutical Industries", "+9647501234567", "Import/Export and large scale distribution.", new Guid("f2b3c4d5-e6f7-4b6c-9d0e-1f2a3b4c5d6e") },
+                    { new Guid("33333333-4444-5555-6666-777777777777"), "Baghdad, Baghdad Al-Jadida", "Al-Mansour Pharmaceuticals", "+9647701234567", "Specialized in chronic disease medications.", new Guid("f3c4d5e6-f7a8-4c7d-0e1f-2a3b4c5d6e7f") }
+                });
+
+            migrationBuilder.InsertData(
+                table: "SupplierMedicines",
+                columns: new[] { "MedicineId", "SupplierId", "MinimumOrderQuantity", "StockQuantity", "WholesalePrice" },
+                values: new object[,]
+                {
+                    { new Guid("a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d"), new Guid("11111111-2222-3333-4444-555555555555"), 10, 500, 1250m },
+                    { new Guid("b2c3d4e5-f6a7-4b6c-9d0e-1f2a3b4c5d6e"), new Guid("11111111-2222-3333-4444-555555555555"), 5, 200, 3500m },
+                    { new Guid("e5f6a7b8-c9d0-4e9f-2a3b-4c5d6e7f8a9b"), new Guid("11111111-2222-3333-4444-555555555555"), 3, 100, 8000m },
+                    { new Guid("a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d"), new Guid("22222222-3333-4444-5555-666666666666"), 20, 1000, 1200m },
+                    { new Guid("c3d4e5f6-a7b8-4c7d-0e1f-2a3b4c5d6e7f"), new Guid("22222222-3333-4444-5555-666666666666"), 10, 350, 2500m },
+                    { new Guid("b2c3d4e5-f6a7-4b6c-9d0e-1f2a3b4c5d6e"), new Guid("33333333-4444-5555-6666-777777777777"), 5, 150, 3600m },
+                    { new Guid("d4e5f6a7-b8c9-4d8e-1f2a-3b4c5d6e7f8a"), new Guid("33333333-4444-5555-6666-777777777777"), 10, 400, 1500m }
                 });
 
             migrationBuilder.CreateIndex(

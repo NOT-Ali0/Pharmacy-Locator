@@ -241,19 +241,10 @@
             }
           },
           {
-            "name": "UserLat",
+            "name": "Location",
             "in": "query",
             "schema": {
-              "type": "number",
-              "format": "double"
-            }
-          },
-          {
-            "name": "UserLng",
-            "in": "query",
-            "schema": {
-              "type": "number",
-              "format": "double"
+              "type": "string"
             }
           }
         ],
@@ -590,13 +581,9 @@
             "type": "string",
             "nullable": true
           },
-          "latitude": {
-            "type": "number",
-            "format": "double"
-          },
-          "longitude": {
-            "type": "number",
-            "format": "double"
+          "address": {
+            "type": "string",
+            "nullable": true
           },
           "phoneNumber": {
             "type": "string",

@@ -49,25 +49,25 @@ public static class ModelBuilderExtensions
             new Supplier
             {
                 Id = supplier1Id, UserId = supplierUser1Id, Name = "Iraqi Pharmaceutical Industry", Address = "Baghdad, Al-Mansour District",
-                Latitude = 33.3152, Longitude = 44.3661, PhoneNumber = "+9647801234567", ServicesDescription = "Local manufacturer and wholesale distributor."
+                PhoneNumber = "+9647801234567", ServicesDescription = "Local manufacturer and wholesale distributor."
             },
             new Supplier
             {
                 Id = supplier2Id, UserId = supplierUser2Id, Name = "Pioneer Pharmaceutical Industries", Address = "Erbil, Industrial Zone",
-                Latitude = 36.1911, Longitude = 44.0091, PhoneNumber = "+9647501234567", ServicesDescription = "Import/Export and large scale distribution."
+                PhoneNumber = "+9647501234567", ServicesDescription = "Import/Export and large scale distribution."
             },
             new Supplier
             {
                 Id = supplier3Id, UserId = supplierUser3Id, Name = "Al-Mansour Pharmaceuticals", Address = "Baghdad, Baghdad Al-Jadida",
-                Latitude = 33.3248, Longitude = 44.4512, PhoneNumber = "+9647701234567", ServicesDescription = "Specialized in chronic disease medications."
+                PhoneNumber = "+9647701234567", ServicesDescription = "Specialized in chronic disease medications."
             }
         );
 
         // --- 4. Seed Pharmacies ---
         modelBuilder.Entity<Pharmacy>().HasData(
-            new Pharmacy { Id = Guid.Parse("77777777-1111-2222-3333-444444444444"), UserId = pharmacyUser1Id, Name = "Al-Amal Pharmacy", Latitude = 33.3015, Longitude = 44.4209, PhoneNumber = "+9647811122233" },
-            new Pharmacy { Id = Guid.Parse("88888888-1111-2222-3333-444444444444"), UserId = pharmacyUser2Id, Name = "Zheen Pharmacy", Latitude = 36.1833, Longitude = 44.0125, PhoneNumber = "+9647501112223" },
-            new Pharmacy { Id = Guid.Parse("99999999-1111-2222-3333-444444444444"), UserId = pharmacyUser3Id, Name = "Al-Fayhaa Pharmacy", Latitude = 30.5081, Longitude = 47.7835, PhoneNumber = "+9647711122233" }
+            new Pharmacy { Id = Guid.Parse("77777777-1111-2222-3333-444444444444"), UserId = pharmacyUser1Id, Name = "Al-Amal Pharmacy", Address = "Baghdad, Palestine St", PhoneNumber = "+9647811122233" },
+            new Pharmacy { Id = Guid.Parse("88888888-1111-2222-3333-444444444444"), UserId = pharmacyUser2Id, Name = "Zheen Pharmacy", Address = "Erbil, 60 Meter Rd", PhoneNumber = "+9647501112223" },
+            new Pharmacy { Id = Guid.Parse("99999999-1111-2222-3333-444444444444"), UserId = pharmacyUser3Id, Name = "Al-Fayhaa Pharmacy", Address = "Basra, Corniche", PhoneNumber = "+9647711122233" }
         );
 
         // --- 5. Seed SupplierMedicines (Links) ---

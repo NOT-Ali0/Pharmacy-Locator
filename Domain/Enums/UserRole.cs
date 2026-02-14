@@ -2,7 +2,6 @@ namespace Domain.Enums;
 
 public enum UserRole
 {
-    Customer,
-    Pharmacy,
-    Supplier
+    Pharmacy = 1,
+    Supplier = 2
 }

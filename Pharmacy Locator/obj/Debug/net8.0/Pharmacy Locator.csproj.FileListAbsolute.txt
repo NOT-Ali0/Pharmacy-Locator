@@ -125,3 +125,129 @@ C:\Users\Yone\source\repos\Pharmacy-Locator\Pharmacy Locator\obj\Debug\net8.0\Ph
 C:\Users\Yone\source\repos\Pharmacy-Locator\Pharmacy Locator\obj\Debug\net8.0\Pharmacy Locator.genruntimeconfig.cache
 C:\Users\Yone\source\repos\Pharmacy-Locator\Pharmacy Locator\obj\Debug\net8.0\ref\Pharmacy Locator.dll
 C:\Users\Yone\Source\Repos\Pharmacy-Locator\Pharmacy Locator\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\appsettings.Development.json
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\appsettings.json
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\Pharmacy Locator.staticwebassets.endpoints.json
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\Pharmacy Locator.exe
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\Pharmacy Locator.deps.json
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\Pharmacy Locator.runtimeconfig.json
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\Pharmacy Locator.dll
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\Pharmacy Locator.pdb
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\AutoMapper.dll
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\BCrypt.Net-Next.dll
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\FluentValidation.dll
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\Humanizer.dll
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.dll
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\Microsoft.CodeAnalysis.Workspaces.dll
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Design.dll
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\Microsoft.OpenApi.dll
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\Mono.TextTemplating.dll
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\Npgsql.dll
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\System.CodeDom.dll
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\System.Composition.AttributedModel.dll
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\System.Composition.Convention.dll
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\System.Composition.Hosting.dll
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\System.Composition.Runtime.dll
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\System.Composition.TypedParts.dll
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.resources.dll
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.resources.dll
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.resources.dll
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.resources.dll
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.resources.dll
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.resources.dll
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.resources.dll
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.resources.dll
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.resources.dll
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\Application.dll
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\Domain.dll
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\Infrastructure.dll
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\Application.pdb
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\Infrastructure.pdb
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\bin\Debug\net8.0\Domain.pdb
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\obj\Debug\net8.0\Pharmacy Locator.csproj.AssemblyReference.cache
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\obj\Debug\net8.0\rpswa.dswa.cache.json
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\obj\Debug\net8.0\Pharmacy Locator.GeneratedMSBuildEditorConfig.editorconfig
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\obj\Debug\net8.0\Pharmacy Locator.AssemblyInfoInputs.cache
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\obj\Debug\net8.0\Pharmacy Locator.AssemblyInfo.cs
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\obj\Debug\net8.0\Pharmacy Locator.csproj.CoreCompileInputs.cache
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\obj\Debug\net8.0\Pharmacy Locator.MvcApplicationPartsAssemblyInfo.cs
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\obj\Debug\net8.0\Pharmacy Locator.MvcApplicationPartsAssemblyInfo.cache
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\obj\Debug\net8.0\Pharmacy Locator.sourcelink.json
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\obj\Debug\net8.0\rjimswa.dswa.cache.json
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\obj\Debug\net8.0\scopedcss\bundle\Pharmacy Locator.styles.css
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\obj\Debug\net8.0\staticwebassets.build.json
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\obj\Debug\net8.0\staticwebassets.build.json.cache
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\obj\Debug\net8.0\staticwebassets.development.json
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\obj\Debug\net8.0\Pharmacy.6D0AF1B9.Up2Date
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\obj\Debug\net8.0\Pharmacy Locator.dll
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\obj\Debug\net8.0\refint\Pharmacy Locator.dll
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\obj\Debug\net8.0\Pharmacy Locator.pdb
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\obj\Debug\net8.0\Pharmacy Locator.genruntimeconfig.cache
+F:\Pharmacy-back\Pharmacy-Locator\Pharmacy Locator\obj\Debug\net8.0\ref\Pharmacy Locator.dll

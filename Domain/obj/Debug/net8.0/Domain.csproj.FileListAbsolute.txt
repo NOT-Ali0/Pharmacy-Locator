@@ -10,3 +10,15 @@ C:\Users\Yone\source\repos\Pharmacy-Locator\Domain\obj\Debug\net8.0\Domain.dll
 C:\Users\Yone\source\repos\Pharmacy-Locator\Domain\obj\Debug\net8.0\refint\Domain.dll
 C:\Users\Yone\source\repos\Pharmacy-Locator\Domain\obj\Debug\net8.0\Domain.pdb
 C:\Users\Yone\source\repos\Pharmacy-Locator\Domain\obj\Debug\net8.0\ref\Domain.dll
+F:\Pharmacy-back\Pharmacy-Locator\Domain\bin\Debug\net8.0\Domain.deps.json
+F:\Pharmacy-back\Pharmacy-Locator\Domain\bin\Debug\net8.0\Domain.dll
+F:\Pharmacy-back\Pharmacy-Locator\Domain\bin\Debug\net8.0\Domain.pdb
+F:\Pharmacy-back\Pharmacy-Locator\Domain\obj\Debug\net8.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+F:\Pharmacy-back\Pharmacy-Locator\Domain\obj\Debug\net8.0\Domain.AssemblyInfoInputs.cache
+F:\Pharmacy-back\Pharmacy-Locator\Domain\obj\Debug\net8.0\Domain.AssemblyInfo.cs
+F:\Pharmacy-back\Pharmacy-Locator\Domain\obj\Debug\net8.0\Domain.csproj.CoreCompileInputs.cache
+F:\Pharmacy-back\Pharmacy-Locator\Domain\obj\Debug\net8.0\Domain.sourcelink.json
+F:\Pharmacy-back\Pharmacy-Locator\Domain\obj\Debug\net8.0\Domain.dll
+F:\Pharmacy-back\Pharmacy-Locator\Domain\obj\Debug\net8.0\refint\Domain.dll
+F:\Pharmacy-back\Pharmacy-Locator\Domain\obj\Debug\net8.0\Domain.pdb
+F:\Pharmacy-back\Pharmacy-Locator\Domain\obj\Debug\net8.0\ref\Domain.dll

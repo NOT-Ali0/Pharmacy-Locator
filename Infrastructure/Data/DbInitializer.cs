@@ -44,8 +44,7 @@ public static class DbInitializer
         {
             UserId = pharmacyUser.Id,
             Name = "Downtown Pharmacy",
-            Latitude = 46.6753, // Example coords (Riyadh roughly)
-            Longitude = 24.7136, 
+            Address = "Riyadh, Saudi Arabia", // Example address
             PhoneNumber = "1234567890"
         };
         context.Pharmacies.Add(pharmacy);

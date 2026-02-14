@@ -27,17 +27,10 @@ public class SupplierService : ISupplierService
 
     public async Task<SupplierDto?> GetSupplierByUserIdAsync(Guid userId)
     {
-        var suppliers = await _supplierRepository.GetAllWithMedicinesAsync(); // Not ideal for performance but acceptable for now given IRepository limits
-        // Better: ISupplierRepository should have GetByUserIdAsync
-        // But for time, I'll allow this or filtering in code if dataset is small.
-        // Actually I should add GetByUserIdAsync to ISupplierRepository for efficiency.
-        // But I'll use FindAsync.
-        
-        var supplier = (await _supplierRepository.FindAsync(s => s.UserId == userId)).FirstOrDefault();
+        var supplier = await _supplierRepository.GetByUserIdAsync(userId);
         if (supplier == null) return null;
         
-        // Reload with medicines
-        return _mapper.Map<SupplierDto>(await _supplierRepository.GetByIdWithMedicinesAsync(supplier.Id));
+        return _mapper.Map<SupplierDto>(supplier);
     }
 
     public async Task<IEnumerable<SupplierDto>> GetAllSuppliersAsync()

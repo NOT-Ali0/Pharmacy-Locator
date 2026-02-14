@@ -19,6 +19,14 @@ public class SupplierRepository : Repository<Supplier>, ISupplierRepository
             .FirstOrDefaultAsync(s => s.Id == id);
     }
 
+    public async Task<Supplier?> GetByUserIdAsync(Guid userId)
+    {
+        return await _context.Suppliers
+            .Include(s => s.SupplierMedicines)
+            .ThenInclude(sm => sm.Medicine)
+            .FirstOrDefaultAsync(s => s.UserId == userId);
+    }
+
     public async Task<SupplierMedicine?> GetSupplierMedicineAsync(Guid supplierId, Guid medicineId)
     {
         return await _context.SupplierMedicines

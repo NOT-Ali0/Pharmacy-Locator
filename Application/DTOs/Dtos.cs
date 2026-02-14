@@ -11,17 +11,25 @@ public record PharmacyDto
 {
     public Guid Id { get; set; }
     public string Name { get; set; } = null!;
-    public double Latitude { get; set; }
-    public double Longitude { get; set; }
+    public string Address { get; set; } = string.Empty;
     public string PhoneNumber { get; set; } = null!;
     public List<MedicineDto> Medicines { get; set; } = new List<MedicineDto>();
 }
 public record MedicineDto(Guid Id, string Name, string Description, bool? IsAvailable);
-public record SearchMedicineRequest(string MedicineName, double UserLat, double UserLng);
+public record SearchMedicineRequest(string MedicineName, string Location);
 public record PharmacySearchResultDto(string PharmacyName, string Address, bool Available);
 
 // Supplier DTOs
-public record SupplierDto(Guid Id, string Name, string PhoneNumber, string Address, double Latitude, double Longitude, string ServicesDescription, List<SupplierMedicineDto> Medicines);
+// public record SupplierDto(Guid Id, string Name, string PhoneNumber, string Address, string ServicesDescription, List<SupplierMedicineDto> Medicines);
+public record SupplierDto
+{
+    public Guid Id { get; init; }
+    public string Name { get; init; } = null!;
+    public string PhoneNumber { get; init; } = null!;
+    public string Address { get; init; } = null!;
+    public string ServicesDescription { get; init; } = null!;
+    public List<SupplierMedicineDto> Medicines { get; init; } = new();
+}
 public record SupplierMedicineDto(Guid MedicineId, string MedicineName, decimal WholesalePrice, int MinimumOrderQuantity, int StockQuantity);
 public record UpdateSupplierMedicineDto(decimal WholesalePrice, int MinimumOrderQuantity, int StockQuantity);
 public record AddSupplierMedicineDto(Guid MedicineId, decimal WholesalePrice, int MinimumOrderQuantity, int StockQuantity);

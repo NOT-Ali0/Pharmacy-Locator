@@ -7,9 +7,9 @@ using System.Security.Claims;
 
 namespace Pharmacy_Locator.Controllers;
 
+[Authorize(Roles = "Supplier")]
 [ApiController]
 [Route("api/[controller]")]
-[Authorize(Roles = nameof(UserRole.Supplier))]
 public class SupplierController : ControllerBase
 {
     private readonly ISupplierService _supplierService;

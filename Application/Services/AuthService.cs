@@ -16,10 +16,29 @@ public class AuthService(IRepository<User> userRepository, IJwtTokenGenerator jw
             throw new Exception("Email already exists.");
         }
 
-        // Hash password (implementation detail postponed to Infrastructure or simplified here if using BCrypt directly)
-        // Ideally use IPasswordHasher. For MVP, I will assume IPasswordHasher is injected or static Use BCrypt directly in infra.
-        // Let's rely on an interface.
         user.PasswordHash = BCrypt.Net.BCrypt.HashPassword(password);
+
+        // Automatically create profile based on role
+        if (user.Role == UserRole.Pharmacy)
+        {
+            user.Pharmacy = new Pharmacy 
+            { 
+                Name = user.Name,
+                User = user // Bidirectional reference for EF cascading
+            };
+        }
+        else if (user.Role == UserRole.Supplier)
+        {
+            user.Supplier = new Supplier 
+            { 
+                Name = user.Name,
+                User = user // Bidirectional reference for EF cascading
+            };
+        }
+        else
+        {
+            throw new Exception("Invalid User Role. Please choose Pharmacy or Supplier.");
+        }
 
         await userRepository.AddAsync(user);
         
@@ -37,15 +56,14 @@ public class AuthService(IRepository<User> userRepository, IJwtTokenGenerator jw
         }
 
         return new LoginResponseDto(
-
             Token: jwtTokenGenerator.GenerateToken(user),
-            new UserDto(
+            User: new UserDto(
                 Id: user.Id,
                 Name: user.Name,
                 Email: user.Email,
-                Role: UserRole.Customer
+                Role: user.Role
             )
-            );
+        );
     }
 
 

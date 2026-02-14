@@ -160,13 +160,8 @@
         "IsRequired": false
       },
       {
-        "Name": "UserLat",
-        "Type": "System.Double",
-        "IsRequired": false
-      },
-      {
-        "Name": "UserLng",
-        "Type": "System.Double",
+        "Name": "Location",
+        "Type": "System.String",
         "IsRequired": false
       }
     ],

@@ -12,7 +12,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Infrastructure.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20260213113525_init")]
+    [Migration("20260213234624_init")]
     partial class init
     {
         /// <inheritdoc />
@@ -42,6 +42,38 @@ namespace Infrastructure.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Medicines");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d"),
+                            Description = "Paracetamol 500mg for pain relief and fever.",
+                            Name = "Panadol Advance"
+                        },
+                        new
+                        {
+                            Id = new Guid("b2c3d4e5-f6a7-4b6c-9d0e-1f2a3b4c5d6e"),
+                            Description = "Amoxicillin 500mg Broad-spectrum antibiotic.",
+                            Name = "Amoxil"
+                        },
+                        new
+                        {
+                            Id = new Guid("c3d4e5f6-a7b8-4c7d-0e1f-2a3b4c5d6e7f"),
+                            Description = "Diclofenac Sodium 50mg Non-steroidal anti-inflammatory drug (NSAID).",
+                            Name = "Voltaren"
+                        },
+                        new
+                        {
+                            Id = new Guid("d4e5f6a7-b8c9-4d8e-1f2a-3b4c5d6e7f8a"),
+                            Description = "Furosemide 40mg Diuretic for fluid retention.",
+                            Name = "Lasix"
+                        },
+                        new
+                        {
+                            Id = new Guid("e5f6a7b8-c9d0-4e9f-2a3b-4c5d6e7f8a9b"),
+                            Description = "Co-amoxiclav 1g Antibiotic for bacterial infections.",
+                            Name = "Augmentin"
+                        });
                 });
 
             modelBuilder.Entity("Domain.Entities.Order", b =>
@@ -101,11 +133,9 @@ namespace Infrastructure.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uuid");
 
-                    b.Property<double>("Latitude")
-                        .HasColumnType("double precision");
-
-                    b.Property<double>("Longitude")
-                        .HasColumnType("double precision");
+                    b.Property<string>("Address")
+                        .IsRequired()
+                        .HasColumnType("text");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -124,6 +154,32 @@ namespace Infrastructure.Migrations
                         .IsUnique();
 
                     b.ToTable("Pharmacies");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("77777777-1111-2222-3333-444444444444"),
+                            Address = "Baghdad, Palestine St",
+                            Name = "Al-Amal Pharmacy",
+                            PhoneNumber = "+9647811122233",
+                            UserId = new Guid("f4d5e6f7-a8b9-4d8e-1f2a-3b4c5d6e7f8a")
+                        },
+                        new
+                        {
+                            Id = new Guid("88888888-1111-2222-3333-444444444444"),
+                            Address = "Erbil, 60 Meter Rd",
+                            Name = "Zheen Pharmacy",
+                            PhoneNumber = "+9647501112223",
+                            UserId = new Guid("f5e6f7a8-b9c0-4e9f-2a3b-4c5d6e7f8a9b")
+                        },
+                        new
+                        {
+                            Id = new Guid("99999999-1111-2222-3333-444444444444"),
+                            Address = "Basra, Corniche",
+                            Name = "Al-Fayhaa Pharmacy",
+                            PhoneNumber = "+9647711122233",
+                            UserId = new Guid("f6f7a8b9-c0d1-4f0a-3b4c-5d6e7f8a9b0c")
+                        });
                 });
 
             modelBuilder.Entity("Domain.Entities.PharmacyMedicine", b =>
@@ -163,12 +219,6 @@ namespace Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<double>("Latitude")
-                        .HasColumnType("double precision");
-
-                    b.Property<double>("Longitude")
-                        .HasColumnType("double precision");
-
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("text");
@@ -190,6 +240,35 @@ namespace Infrastructure.Migrations
                         .IsUnique();
 
                     b.ToTable("Suppliers");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("11111111-2222-3333-4444-555555555555"),
+                            Address = "Baghdad, Al-Mansour District",
+                            Name = "Iraqi Pharmaceutical Industry",
+                            PhoneNumber = "+9647801234567",
+                            ServicesDescription = "Local manufacturer and wholesale distributor.",
+                            UserId = new Guid("f1a2b3c4-d5e6-4a5b-8c9d-0e1f2a3b4c5d")
+                        },
+                        new
+                        {
+                            Id = new Guid("22222222-3333-4444-5555-666666666666"),
+                            Address = "Erbil, Industrial Zone",
+                            Name = "Pioneer Pharmaceutical Industries",
+                            PhoneNumber = "+9647501234567",
+                            ServicesDescription = "Import/Export and large scale distribution.",
+                            UserId = new Guid("f2b3c4d5-e6f7-4b6c-9d0e-1f2a3b4c5d6e")
+                        },
+                        new
+                        {
+                            Id = new Guid("33333333-4444-5555-6666-777777777777"),
+                            Address = "Baghdad, Baghdad Al-Jadida",
+                            Name = "Al-Mansour Pharmaceuticals",
+                            PhoneNumber = "+9647701234567",
+                            ServicesDescription = "Specialized in chronic disease medications.",
+                            UserId = new Guid("f3c4d5e6-f7a8-4c7d-0e1f-2a3b4c5d6e7f")
+                        });
                 });
 
             modelBuilder.Entity("Domain.Entities.SupplierMedicine", b =>
@@ -214,6 +293,64 @@ namespace Infrastructure.Migrations
                     b.HasIndex("MedicineId");
 
                     b.ToTable("SupplierMedicines");
+
+                    b.HasData(
+                        new
+                        {
+                            SupplierId = new Guid("11111111-2222-3333-4444-555555555555"),
+                            MedicineId = new Guid("a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d"),
+                            MinimumOrderQuantity = 10,
+                            StockQuantity = 500,
+                            WholesalePrice = 1250m
+                        },
+                        new
+                        {
+                            SupplierId = new Guid("11111111-2222-3333-4444-555555555555"),
+                            MedicineId = new Guid("b2c3d4e5-f6a7-4b6c-9d0e-1f2a3b4c5d6e"),
+                            MinimumOrderQuantity = 5,
+                            StockQuantity = 200,
+                            WholesalePrice = 3500m
+                        },
+                        new
+                        {
+                            SupplierId = new Guid("11111111-2222-3333-4444-555555555555"),
+                            MedicineId = new Guid("e5f6a7b8-c9d0-4e9f-2a3b-4c5d6e7f8a9b"),
+                            MinimumOrderQuantity = 3,
+                            StockQuantity = 100,
+                            WholesalePrice = 8000m
+                        },
+                        new
+                        {
+                            SupplierId = new Guid("22222222-3333-4444-5555-666666666666"),
+                            MedicineId = new Guid("a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d"),
+                            MinimumOrderQuantity = 20,
+                            StockQuantity = 1000,
+                            WholesalePrice = 1200m
+                        },
+                        new
+                        {
+                            SupplierId = new Guid("22222222-3333-4444-5555-666666666666"),
+                            MedicineId = new Guid("c3d4e5f6-a7b8-4c7d-0e1f-2a3b4c5d6e7f"),
+                            MinimumOrderQuantity = 10,
+                            StockQuantity = 350,
+                            WholesalePrice = 2500m
+                        },
+                        new
+                        {
+                            SupplierId = new Guid("33333333-4444-5555-6666-777777777777"),
+                            MedicineId = new Guid("b2c3d4e5-f6a7-4b6c-9d0e-1f2a3b4c5d6e"),
+                            MinimumOrderQuantity = 5,
+                            StockQuantity = 150,
+                            WholesalePrice = 3600m
+                        },
+                        new
+                        {
+                            SupplierId = new Guid("33333333-4444-5555-6666-777777777777"),
+                            MedicineId = new Guid("d4e5f6a7-b8c9-4d8e-1f2a-3b4c5d6e7f8a"),
+                            MinimumOrderQuantity = 10,
+                            StockQuantity = 400,
+                            WholesalePrice = 1500m
+                        });
                 });
 
             modelBuilder.Entity("Domain.Entities.User", b =>
@@ -240,6 +377,56 @@ namespace Infrastructure.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Users");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("f1a2b3c4-d5e6-4a5b-8c9d-0e1f2a3b4c5d"),
+                            Email = "admin@iqpharma.com",
+                            Name = "Iraqi Pharma Admin",
+                            PasswordHash = "AQAAAAEAACcQAAAAE...",
+                            Role = 2
+                        },
+                        new
+                        {
+                            Id = new Guid("f2b3c4d5-e6f7-4b6c-9d0e-1f2a3b4c5d6e"),
+                            Email = "admin@pioneer.iq",
+                            Name = "Pioneer Admin",
+                            PasswordHash = "AQAAAAEAACcQAAAAE...",
+                            Role = 2
+                        },
+                        new
+                        {
+                            Id = new Guid("f3c4d5e6-f7a8-4c7d-0e1f-2a3b4c5d6e7f"),
+                            Email = "admin@mansour.com",
+                            Name = "Mansour Pharma Admin",
+                            PasswordHash = "AQAAAAEAACcQAAAAE...",
+                            Role = 2
+                        },
+                        new
+                        {
+                            Id = new Guid("f4d5e6f7-a8b9-4d8e-1f2a-3b4c5d6e7f8a"),
+                            Email = "owner@baghdadpharma.com",
+                            Name = "Baghdad Pharmacy Owner",
+                            PasswordHash = "AQAAAAEAACcQAAAAE...",
+                            Role = 1
+                        },
+                        new
+                        {
+                            Id = new Guid("f5e6f7a8-b9c0-4e9f-2a3b-4c5d6e7f8a9b"),
+                            Email = "owner@erbilpharma.com",
+                            Name = "Erbil Pharmacy Owner",
+                            PasswordHash = "AQAAAAEAACcQAAAAE...",
+                            Role = 1
+                        },
+                        new
+                        {
+                            Id = new Guid("f6f7a8b9-c0d1-4f0a-3b4c-5d6e7f8a9b0c"),
+                            Email = "owner@basrapharma.com",
+                            Name = "Basra Pharmacy Owner",
+                            PasswordHash = "AQAAAAEAACcQAAAAE...",
+                            Role = 1
+                        });
                 });
 
             modelBuilder.Entity("Domain.Entities.Order", b =>

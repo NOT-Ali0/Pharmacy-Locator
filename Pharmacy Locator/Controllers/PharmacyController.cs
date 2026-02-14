@@ -7,6 +7,7 @@ using System.Security.Claims;
 
 namespace Pharmacy_Locator.Controllers;
 
+[Authorize(Roles = "Pharmacy")]
 [ApiController]
 [Route("api/[controller]")]
 public class PharmacyController : ControllerBase
@@ -24,7 +25,6 @@ public class PharmacyController : ControllerBase
 
     private Guid GetUserId() => Guid.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value!);
 
-    [Authorize(Roles = nameof(UserRole.Pharmacy))]
     [HttpGet("me")]
     public async Task<IActionResult> GetMyPharmacy()
     {
@@ -33,7 +33,6 @@ public class PharmacyController : ControllerBase
         return Ok(pharmacy);
     }
 
-    [Authorize(Roles = nameof(UserRole.Pharmacy))]
     [HttpPost]
     public async Task<IActionResult> CreatePharmacy(PharmacyDto pharmacyDto)
     {
@@ -49,7 +48,6 @@ public class PharmacyController : ControllerBase
     }
 
     // Public/Non-Auth or Auth? Requirement "Pharmacy: View Suppliers" -> Implies Pharmacy Role
-    [Authorize(Roles = nameof(UserRole.Pharmacy))]
     [HttpGet("suppliers")]
     public async Task<IActionResult> GetSuppliers()
     {
@@ -57,7 +55,6 @@ public class PharmacyController : ControllerBase
         return Ok(suppliers);
     }
 
-    [Authorize(Roles = nameof(UserRole.Pharmacy))]
     [HttpGet("suppliers/{supplierId}/medicines")]
     public async Task<IActionResult> GetSupplierMedicines(Guid supplierId)
     {
@@ -82,7 +79,6 @@ public class PharmacyController : ControllerBase
         return Ok(); // Placeholder if needed, but GetAllSuppliers probably covers it.
     }
 
-    [Authorize(Roles = nameof(UserRole.Pharmacy))]
     [HttpPost("orders")]
     public async Task<IActionResult> CreateOrder(CreateOrderDto dto)
     {
@@ -100,7 +96,6 @@ public class PharmacyController : ControllerBase
         }
     }
 
-    [Authorize(Roles = nameof(UserRole.Pharmacy))]
     [HttpGet("orders")]
     public async Task<IActionResult> GetMyOrders()
     {
@@ -112,6 +107,7 @@ public class PharmacyController : ControllerBase
     }
 
     // Existing endpoints...
+    [AllowAnonymous]
     [HttpGet("search-medicine")]
     public async Task<IActionResult> SearchMedicine([FromQuery] SearchMedicineRequest request)
     {
@@ -119,7 +115,6 @@ public class PharmacyController : ControllerBase
         return Ok(results);
     }
     
-    [Authorize(Roles = nameof(UserRole.Pharmacy))]
     [HttpPut("medicines/{medicineId}")]
     public async Task<IActionResult> UpdateMedicineAvailability(Guid medicineId, [FromBody] bool isAvailable)
     {
@@ -134,7 +129,6 @@ public class PharmacyController : ControllerBase
         }
     }
 
-    [Authorize(Roles = nameof(UserRole.Pharmacy))]
     [HttpDelete("medicines/{medicineId}")]
     public async Task<IActionResult> DeleteMedicine(Guid medicineId)
     {

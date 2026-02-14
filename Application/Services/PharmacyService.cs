@@ -42,7 +42,7 @@ public class PharmacyService : IPharmacyService
         
         return pharmacies.Select(p => new PharmacySearchResultDto(
             p.Name,
-            $"Lat: {p.Latitude}, Lng: {p.Longitude}", 
+            p.Address, 
             true
         ));
     }
